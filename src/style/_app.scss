@@ -1,0 +1,13 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 100vw;
+  background-color: rgb(255, 226, 190);
+
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+}

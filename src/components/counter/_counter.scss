@@ -1,0 +1,17 @@
+.counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1em;
+  margin: 1em;
+  background-color: rgb(195, 155, 232);
+
+  button {
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+  }
+  p {
+    padding: 10px;
+  }
+}

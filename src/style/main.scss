@@ -1,0 +1,13 @@
+@import "./app";
+@import "../components/header/header";
+@import "../components/repeatText/repeatText";
+@import "../components/list/list";
+@import "../components/counter/counter";
+@import "../components/check/check";
+@import "../components/radio/radio";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

@@ -1,0 +1,17 @@
+.check {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin: 1em;
+  background-color: rgb(160, 220, 100);
+  align-items: center;
+
+  label,
+  input {
+    padding: 3px;
+  }
+
+  p {
+    padding-top: 10px;
+  }
+}
