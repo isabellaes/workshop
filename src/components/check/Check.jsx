@@ -4,8 +4,6 @@ const Check = () => {
   const [catChecked, setCatChecked] = useState();
   const [dogChecked, setDogChecked] = useState();
 
-  const text = getText();
-
   function handleChange(checked, value) {
     if (value === "Cat" && checked) {
       setCatChecked(true);
@@ -18,17 +16,6 @@ const Check = () => {
     }
   }
 
-  function getText() {
-    if (catChecked && dogChecked) {
-      return "Cat and Dog";
-    } else if (catChecked) {
-      return "Cat";
-    } else if (dogChecked) {
-      return "Dog";
-    } else {
-      return "";
-    }
-  }
   return (
     <div className="check">
       <div className="input">
@@ -52,7 +39,11 @@ const Check = () => {
         />
       </div>
 
-      <p>{text}</p>
+      <p>
+        {catChecked && "Cat"}
+        {catChecked && dogChecked && " and "}
+        {dogChecked && "Dog"}
+      </p>
     </div>
   );
 };

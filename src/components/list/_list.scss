@@ -1,5 +1,9 @@
-ul {
+.list {
   padding: 2em;
   background-color: rgb(138, 138, 214);
   margin: 1em;
+
+  li {
+    margin: 1em;
+  }
 }

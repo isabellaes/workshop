@@ -1,0 +1,15 @@
+.todo {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin: 1em;
+  background-color: rgb(149, 236, 246);
+
+  .text {
+    padding: 1em;
+  }
+
+  ul {
+    padding: 1em;
+  }
+}

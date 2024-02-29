@@ -1,6 +1,6 @@
 const List = ({ animalArray }) => {
   return (
-    <ul>
+    <ul className="list">
       {animalArray.map((animal) => (
         <li key={animal}>{animal}</li>
       ))}
