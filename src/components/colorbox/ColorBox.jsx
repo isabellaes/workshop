@@ -1,7 +1,19 @@
+import { useState } from "react";
+
 const ColorBox = ({ colors }) => {
+  const [colorList, setColorList] = useState(colors);
+  const text = "#fff";
+  function handleAddColor() {
+    const newList = [text, ...colorList];
+    setColorList(newList);
+  }
   return (
     <div className="colorbox">
-      {colors.map((color) => (
+      <div className="textbox">
+        <p>{text}</p>
+        <button onClick={() => handleAddColor()}>Add color</button>
+      </div>
+      {colorList.map((color) => (
         <div
           key={color}
           style={{
@@ -14,12 +26,3 @@ const ColorBox = ({ colors }) => {
 };
 
 export default ColorBox;
-
-/* 
-
-Skapa en komponent ColorBox som tar emot en array av strängar med färgnamn i CSS. Komponenten är en div med flera div-kvadrater i sig på rad. De inre divarna är färgade enligt arrayen (och lika många kvadrater som element i arrayen).
-
-UTMANING: Lägg till en textbox och en knapp. När man klickar på knappen så läggs texten i textboxen till arrayen av färgnamn. En till färgad kvadrat läggs till med den färg man skrev i textboxen.
-
-
-*/
