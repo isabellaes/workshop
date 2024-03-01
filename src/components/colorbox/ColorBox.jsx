@@ -2,15 +2,20 @@ import { useState } from "react";
 
 const ColorBox = ({ colors }) => {
   const [colorList, setColorList] = useState(colors);
-  const text = "#fff";
+  const [input, setInput] = useState();
   function handleAddColor() {
-    const newList = [text, ...colorList];
+    const newList = [input, ...colorList];
     setColorList(newList);
   }
   return (
     <div className="colorbox">
       <div className="textbox">
-        <p>{text}</p>
+        <label htmlFor="input-color"></label>
+        <input
+          id="input-color"
+          type="text"
+          onChange={(e) => setInput(e.currentTarget.value)}
+        />
         <button onClick={() => handleAddColor()}>Add color</button>
       </div>
       {colorList.map((color) => (
