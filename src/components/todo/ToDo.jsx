@@ -4,7 +4,7 @@ const ToDo = () => {
   const [list, setList] = useState([]);
   const text = "Lorem ipsum dolor sit amet consectetur adipisicing elit.";
   function handleAddText() {
-    const newlist = [text, ...list];
+    const newlist = [...list, text];
     setList(newlist);
   }
   function handleDelete(index) {

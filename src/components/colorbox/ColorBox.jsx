@@ -4,7 +4,7 @@ const ColorBox = ({ colors }) => {
   const [colorList, setColorList] = useState(colors);
   const [input, setInput] = useState();
   function handleAddColor() {
-    const newList = [input, ...colorList];
+    const newList = [...colorList, input];
     setColorList(newList);
   }
   return (
@@ -20,6 +20,7 @@ const ColorBox = ({ colors }) => {
       </div>
       {colorList.map((color) => (
         <div
+          className="color"
           key={color}
           style={{
             backgroundColor: color,

@@ -1,5 +1,8 @@
 .colorbox {
-  div {
+  margin: 1;
+  padding: 1em;
+
+  .color {
     height: 5em;
     width: 5em;
     border: 1px solid black;
